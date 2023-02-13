@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.11.1 on win32)" generated="20230102 21:02:29.469" rpa="false" schemaversion="3">
+<suite id="s1" name="List Operations" source="C:\Users\Sivaram\PycharmProjects\Robot-Framework-Learn\list_operations.robot">
+<test id="s1-t1" name="list operand" line="8">
+<kw name="Create List" library="BuiltIn">
+<var>@{data}</var>
+<arg>ram</arg>
+<arg>sam</arg>
+<arg>tom</arg>
+<arg>jhon</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230102 21:02:29.516" level="INFO">@{data} = [ ram | sam | tom | jhon ]</msg>
+<status status="PASS" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${val}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230102 21:02:29.516" level="INFO">${val} = []</msg>
+<status status="PASS" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<for flavor="IN">
+<var>${f}</var>
+<value>${data}</value>
+<iter>
+<var name="${f}">['ram', 'sam', 'tom', 'jhon']</var>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${f}' == 'sam'</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<msg timestamp="20230102 21:02:29.516" level="FAIL">Keyword 'BuiltIn.Run Keyword If' expected at least 2 arguments, got 1.</msg>
+<status status="FAIL" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${val}</arg>
+<arg>${f}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${val}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<status status="FAIL" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</iter>
+<status status="FAIL" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</for>
+<kw name="End" library="Reserved">
+<status status="NOT RUN" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516"/>
+</kw>
+<status status="FAIL" starttime="20230102 21:02:29.516" endtime="20230102 21:02:29.516">Keyword 'BuiltIn.Run Keyword If' expected at least 2 arguments, got 1.</status>
+</test>
+<doc>doing list operation here</doc>
+<status status="FAIL" starttime="20230102 21:02:29.469" endtime="20230102 21:02:29.531"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="List Operations">List Operations</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
